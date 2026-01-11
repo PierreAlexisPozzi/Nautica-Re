@@ -1,0 +1,7 @@
+{
+  "name": "Nautica Ré",
+  "description": "Refonte SEO & GEO de Nautica Ré - École de navigation et location de bateaux à l'Île de Ré.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
