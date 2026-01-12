@@ -80,7 +80,7 @@ export const BOATS: BoatModel[] = [
     capacity: 12,
     power: 'De 100cv à 250cv',
     price: 'À partir de 300€',
-    image: 'https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.grouperouxelmarine.com/wp-content/uploads/2024/01/bateau-highfield-sport-med-700-9488993-yb-1.jpg',
     examples: 'Zodiac Pro, Bombard Sunrider, Highfield Patrol.'
   },
   {
@@ -89,7 +89,7 @@ export const BOATS: BoatModel[] = [
     capacity: 8,
     power: 'De 100cv à 200cv',
     price: 'À partir de 250€',
-    image: 'https://images.unsplash.com/photo-1544551763-47a184230181?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.meadream-sailing.com/wp-content/uploads/2023/06/G82C1555-1024x683.jpg',
     examples: 'Jeanneau Cap Camarat, Beneteau Flyer.'
   },
   {
@@ -98,7 +98,7 @@ export const BOATS: BoatModel[] = [
     capacity: 6,
     power: '150cv et +',
     price: 'À partir de 420€',
-    image: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798156?auto=format&fit=crop&q=80&w=800',
+    image: 'https://www.beneteau.com/sites/default/files/styles/standard_large/public/2023-09/flyer-10-pilot-edition3.jpg.webp?itok=ztIVhiST',
     examples: 'Jeanneau Merry Fisher, Beneteau Antares.'
   }
 ];
