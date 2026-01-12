@@ -8,7 +8,6 @@ import Home from './pages/Home';
 import Permis from './pages/Permis';
 import Location from './pages/Location';
 import Team from './pages/Team';
-import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 
 const App: React.FC = () => {
@@ -22,10 +21,7 @@ const App: React.FC = () => {
             <Route path="/permis" element={<Permis />} />
             <Route path="/location" element={<Location />} />
             <Route path="/equipe" element={<Team />} />
-            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
-            {/* Simple redirection for coaching to contact since it's a specific lead segment */}
-            <Route path="/coaching" element={<Contact />} />
           </Routes>
         </main>
         <Footer />

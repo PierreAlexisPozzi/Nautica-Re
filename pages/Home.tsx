@@ -1,145 +1,179 @@
 
 import React from 'react';
-import { Ship, Award, Users, ChevronRight, Star } from 'lucide-react';
+import { Ship, Award, ChevronRight, CheckCircle, Anchor } from 'lucide-react';
 import SEO from '../components/SEO';
 import { JSON_LD, FAQS } from '../constants';
 import FAQAccordion from '../components/FAQAccordion';
 import SafeLink from '../components/SafeLink';
 
+const WaveDivider: React.FC<{ flip?: boolean; color?: string; staggered?: boolean }> = ({ flip, color = "fill-white", staggered }) => (
+  <div className={`absolute left-0 w-full overflow-hidden leading-0 z-10 ${flip ? 'bottom-0' : 'top-0'}`} style={{ height: '75px' }}>
+    <svg 
+      viewBox="0 0 1200 120" 
+      preserveAspectRatio="none" 
+      className={`relative block w-full h-full ${flip ? 'rotate-180' : ''} ${color} ${staggered ? 'opacity-80 translate-y-2' : ''}`}
+    >
+      <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
+    </svg>
+  </div>
+);
+
 const Home: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Nautica Ré | Permis Bateau & Location de Bateaux Île de Ré" 
-        description="Passez votre permis bateau à La Flotte, Saint Martin de Ré ou Ars en Ré avec Nautica Ré. Formation accélérée, coaching personnalisé et location de bateaux sur l'Île de Ré avec Cypriane et Nicolas."
+        title="Nautica Ré | Permis Bateau & Location Île de Ré (La Flotte) & La Rochelle" 
+        description="Avec Nautica Ré, vivez la mer autrement. Permis bateau et location de bateaux à La Flotte en Ré. Ouvert du Lundi au Samedi."
         schema={JSON_LD}
       />
 
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
+      <section className="relative h-[85vh] flex items-center overflow-hidden bg-slate-900">
         <img 
           src="https://www.iledere.com/app/uploads/iledere/2024/07/thumbs/vue-aerienne-port-la-flotte-ile-de-re-par-edouard-salmon-skystudio-640x640.webp" 
-          alt="Bateau école Nautica Ré à La Flotte et Saint Martin de Ré" 
+          alt="Port de La Flotte en Ré - Nautica Ré" 
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 to-transparent"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="max-w-2xl">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+          <div className="max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">
-              Votre École de Navigation et Location de Bateaux à l'Île de Ré
+              Avec Nautica Ré, vivez la <span className="text-blue-400 italic">mer autrement</span>
             </h1>
             <p className="text-xl text-slate-200 mb-10 leading-relaxed font-light">
-              Située à La Flotte en Ré en Charente-Maritime, Nautica Ré vous accompagne pour obtenir votre permis plaisance ou pour une location sécurisée.
+              École de navigation au <strong>Port de La Flotte</strong>. Permis bateau (Côtier, Hauturier) à Ré et <strong>La Rochelle</strong>. Location de bateaux toutes catégories.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <SafeLink 
-                to="/permis" 
-                className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg flex items-center justify-center group"
-              >
+            <div className="flex flex-col sm:flex-row gap-5">
+              <SafeLink to="/permis" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-5 rounded-2xl text-lg font-bold transition-all shadow-xl flex items-center justify-center group">
                 Passer mon permis
                 <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </SafeLink>
-              <SafeLink 
-                to="/location" 
-                className="bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-lg flex items-center justify-center"
-              >
+              <SafeLink to="/location" className="bg-white hover:bg-slate-100 text-slate-900 px-8 py-5 rounded-2xl text-lg font-bold transition-all shadow-xl flex items-center justify-center">
                 Louer un bateau
               </SafeLink>
             </div>
           </div>
         </div>
+        <WaveDivider flip />
       </section>
 
-      {/* Brand Pitch Section */}
-      <section className="py-24 bg-white">
+      {/* Services Section */}
+      <section className="relative py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4 uppercase tracking-tight">Vivez l'expérience</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg">
+              De l'apprentissage théorique à l'autonomie en mer, nous vous accompagnons dans toutes vos aventures nautiques.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <article className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-2 shadow-sm">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                <Award size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 italic">Permis Bateau</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Formation complète à <strong>La Flotte</strong>. Pratique en mer à Ré ou <strong>La Rochelle</strong>. Côtier dès 330€.
+              </p>
+              <SafeLink to="/permis" className="text-blue-600 font-bold flex items-center hover:text-blue-800 uppercase text-xs tracking-widest">
+                Nos formules <ChevronRight size={14} className="ml-1" />
+              </SafeLink>
+            </article>
+
+            <article className="p-10 rounded-[2.5rem] bg-slate-900 text-white transition-all hover:shadow-2xl hover:-translate-y-2 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10">
+                <Ship size={120} />
+              </div>
+              <div className="w-16 h-16 bg-blue-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg relative z-10">
+                <Ship size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 italic relative z-10">Location</h3>
+              <p className="text-slate-300 mb-6 leading-relaxed relative z-10">
+                Une flotte moderne disponible exclusivement au départ du <strong>Port de La Flotte</strong> pour vos journées évasion.
+              </p>
+              <SafeLink to="/location" className="text-blue-400 font-bold flex items-center hover:text-blue-200 uppercase text-xs tracking-widest relative z-10">
+                Voir la flotte <ChevronRight size={14} className="ml-1" />
+              </SafeLink>
+            </article>
+
+            <article className="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 transition-all hover:shadow-xl hover:-translate-y-2 shadow-sm">
+              <div className="w-16 h-16 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                <Anchor size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 italic">Coaching</h3>
+              <p className="text-slate-600 mb-6 leading-relaxed">
+                Perfectionnement aux manœuvres et accostage avec un moniteur expert sur l'Île de Ré.
+              </p>
+              <SafeLink to="/location" className="text-blue-600 font-bold flex items-center hover:text-blue-800 uppercase text-xs tracking-widest">
+                Se perfectionner <ChevronRight size={14} className="ml-1" />
+              </SafeLink>
+            </article>
+          </div>
+        </div>
+        <WaveDivider flip color="fill-slate-50" />
+      </section>
+
+      {/* Local Focus Section with staggered layout */}
+      <section className="relative py-24 bg-slate-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="relative group">
+              <div className="absolute -inset-4 bg-blue-600/10 rounded-[3.5rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <img 
                 src="https://i.postimg.cc/SK55p539/Gemini-Generated-Image-iqynxxiqynxxiqyn.png" 
-                alt="Navigation autour de l'île de Ré" 
-                className="rounded-3xl shadow-2xl relative z-10"
+                alt="Navigation Île de Ré" 
+                className="rounded-[3rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3]"
               />
-              <div className="absolute -bottom-8 -right-8 w-64 bg-blue-900 text-white p-8 rounded-3xl z-20 hidden md:block">
-                <p className="text-4xl font-serif font-bold mb-1">98%</p>
-                <p className="text-sm font-semibold text-blue-200 uppercase tracking-wider">Réussite au code</p>
+              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl z-20 hidden md:block border border-slate-100">
+                <p className="text-slate-900 font-serif italic text-lg leading-tight">Naviguez dans les<br/>meilleures conditions.</p>
               </div>
             </div>
             
             <div className="space-y-8">
-              <div className="flex items-center space-x-2 text-blue-600 font-bold uppercase tracking-widest text-sm">
-                <span className="w-10 h-[2px] bg-blue-600"></span>
-                <span>Notre ADN</span>
-              </div>
-              <h2 className="text-4xl font-serif font-bold text-slate-900">Une expertise née de la passion</h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Fondée par Cypriane et Nicolas, deux passionnés de l'océan, notre établissement vous accompagne pour obtenir votre permis plaisance ou pour profiter d'une location de bateau sécurisée. Que vous soyez débutant ou marin confirmé, nous mettons notre expertise à votre service pour faire de chaque sortie en mer un moment d'exception.
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 leading-tight">
+                Ancrés à <span className="text-blue-600 italic">La Flotte en Ré</span>
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed font-light">
+                Nos bureaux vous accueillent au 2 Bis rue de la Croix Michaud, du Lundi au Samedi. Nous privilégions une approche personnalisée pour faire de chaque marin un expert.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
-                    <Ship size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900">Formation Moderne</h4>
-                    <p className="text-sm text-slate-500">Plateforme e-learning 24/7 et coaching personnalisé.</p>
-                  </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="flex items-center space-x-3 text-slate-700 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 transition-transform hover:scale-105">
+                  <CheckCircle className="text-blue-600" size={20} />
+                  <span className="font-semibold text-sm">Pratique Ré ou Rochelle</span>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-blue-50 rounded-lg text-blue-600">
-                    <Users size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900">Équipe d'Experts</h4>
-                    <p className="text-sm text-slate-500">Moniteurs diplômés et passionnés par la transmission.</p>
-                  </div>
+                <div className="flex items-center space-x-3 text-slate-700 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 transition-transform hover:scale-105">
+                  <CheckCircle className="text-blue-600" size={20} />
+                  <span className="font-semibold text-sm">Location (La Flotte)</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-700 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 transition-transform hover:scale-105">
+                  <CheckCircle className="text-blue-600" size={20} />
+                  <span className="font-semibold text-sm">Secteur Pertuis Breton</span>
+                </div>
+                <div className="flex items-center space-x-3 text-slate-700 bg-white p-4 rounded-2xl shadow-sm border border-slate-100 transition-transform hover:scale-105">
+                  <CheckCircle className="text-blue-600" size={20} />
+                  <span className="font-semibold text-sm">Experts diplômés</span>
                 </div>
               </div>
-              <SafeLink to="/equipe" className="inline-flex items-center text-blue-600 font-bold hover:underline">
-                Découvrir notre équipe <ChevronRight size={18} className="ml-1" />
-              </SafeLink>
+              <div className="pt-6">
+                <SafeLink to="/contact" className="bg-slate-900 text-white px-10 py-5 rounded-2xl font-bold hover:bg-slate-800 transition-all shadow-lg uppercase tracking-widest text-sm flex items-center w-fit">
+                  Nous Contacter
+                  <ChevronRight size={18} className="ml-2" />
+                </SafeLink>
+              </div>
             </div>
           </div>
         </div>
+        <WaveDivider flip color="fill-white" />
       </section>
 
-      {/* Reviews Mockup */}
-      <section className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-          <h2 className="text-3xl font-serif font-bold mb-4">Ils nous font confiance</h2>
-          <div className="flex justify-center items-center space-x-1 mb-2">
-            {[1,2,3,4,5].map(i => <Star key={i} fill="#f59e0b" className="text-amber-500" />)}
-          </div>
-          <p className="text-slate-500">4.9/5 sur Google Reviews • Basé sur 150+ avis</p>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden relative">
-          <div className="flex space-x-8 animate-marquee">
-            {[1,2,3,4].map(i => (
-              <div key={i} className="min-w-[350px] bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-slate-200 rounded-full flex items-center justify-center font-bold">J</div>
-                  <div>
-                    <p className="font-bold text-sm">Jean-Marc T.</p>
-                    <p className="text-xs text-slate-400">Il y a 2 semaines</p>
-                  </div>
-                </div>
-                <p className="text-slate-600 text-sm italic">
-                  "Excellente pédagogie avec Cypriane. Le permis côtier passé sans stress à La Flotte. Je recommande Nautica Ré les yeux fermés !"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold text-slate-900">Questions Fréquentes</h2>
-            <p className="text-slate-500 mt-4">Tout ce qu'il faut savoir avant de prendre la mer avec nous.</p>
+      {/* FAQ */}
+      <section className="relative py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-serif font-bold text-slate-900 italic">Questions Fréquentes</h2>
+            <p className="text-slate-500 mt-4 font-light">Informations essentielles pour préparer votre sortie.</p>
           </div>
           <FAQAccordion items={FAQS} />
         </div>

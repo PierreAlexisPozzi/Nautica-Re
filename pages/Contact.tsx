@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
-import { MapPin, Phone, Mail, Send, Clock, ExternalLink } from 'lucide-react';
+// Added Anchor to the imports to resolve the missing reference on line 82
+import { MapPin, Phone, Mail, Send, Clock, ExternalLink, ChevronRight, Anchor } from 'lucide-react';
+import { PHONE_1, PHONE_2 } from '../constants';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -13,135 +15,136 @@ const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Merci pour votre message ! Cypriane ou Nicolas reviendront vers vous rapidement.");
+    alert("Merci pour votre message ! Notre équipe reviendra vers vous dans les plus brefs délais.");
   };
 
   return (
     <div className="pt-20">
       <SEO 
-        title="Contact & Accès | Nautica Ré Port de La Flotte" 
-        description="Besoin d'un permis bateau ou d'une location ? Contactez Nautica Ré au Port de La Flotte. Réponse rapide garantie."
+        title="Contact & Horaires Nautica Ré | La Flotte en Ré" 
+        description="Nos bureaux sont situés au 2 Bis rue de la Croix Michaud à La Flotte. Ouvert du Lundi au Samedi de 9h à 18h."
       />
 
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-8">Contact & Accès</h1>
-              <p className="text-xl text-slate-500 mb-12 font-light">
-                Nous sommes à votre disposition pour toute question concernant nos formations ou la location de nos bateaux.
+              <h1 className="text-4xl md:text-6xl font-serif font-bold text-slate-900 mb-8 uppercase tracking-tight italic">Gardons le contact</h1>
+              <p className="text-xl text-slate-500 mb-12 font-light leading-relaxed">
+                Une question sur nos tarifs, nos sessions de code ou nos disponibilités de location ? Notre équipe vous accueille à <strong>La Flotte</strong>.
               </p>
 
-              <div className="space-y-8 mb-12">
-                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-blue-900 text-white rounded-2xl shadow-lg">
-                    <MapPin size={24} />
+              <div className="space-y-12 mb-16">
+                <div className="flex items-start space-x-8 group">
+                  <div className="p-5 bg-blue-900 text-white rounded-[1.5rem] shadow-xl flex-shrink-0 transition-transform group-hover:scale-110 duration-500">
+                    <MapPin size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 text-lg">Bureau du Port</h4>
-                    <p className="text-slate-600">Port de La Flotte, 17630 La Flotte, Île de Ré</p>
+                    <h4 className="font-bold text-slate-900 text-lg uppercase tracking-widest mb-2 italic">Bureau & Agence</h4>
+                    <p className="text-slate-600 text-lg leading-snug">2 Bis rue de la Croix Michaud,<br />17630 La Flotte, Île de Ré</p>
                     <a 
-                      href="https://maps.google.com" 
+                      href="https://www.google.com/maps/search/?api=1&query=2+Bis+rue+de+la+Croix+Michaud+La+Flotte" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-600 text-sm font-bold flex items-center mt-2 hover:underline"
+                      className="text-blue-600 text-xs font-bold flex items-center mt-3 hover:underline uppercase tracking-widest"
                     >
-                      Ouvrir dans Google Maps <ExternalLink size={14} className="ml-1" />
+                      Nous trouver sur la carte <ExternalLink size={14} className="ml-2" />
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-blue-900 text-white rounded-2xl shadow-lg">
-                    <Phone size={24} />
+                
+                <div className="flex items-start space-x-8 group">
+                  <div className="p-5 bg-blue-900 text-white rounded-[1.5rem] shadow-xl flex-shrink-0 transition-transform group-hover:scale-110 duration-500">
+                    <Phone size={28} />
                   </div>
-                  <div>
-                    <h4 className="font-bold text-slate-900 text-lg">Téléphone</h4>
-                    <p className="text-slate-600">Appel direct : <a href="tel:+33600000000" className="hover:text-blue-600 transition-colors">06 00 00 00 00</a></p>
+                  <div className="flex flex-col space-y-4">
+                    <h4 className="font-bold text-slate-900 text-lg uppercase tracking-widest italic">Appelez-nous</h4>
+                    <div className="space-y-2">
+                      <a href={`tel:${PHONE_1.replace(/\s/g, '')}`} className="text-slate-600 font-bold text-2xl hover:text-blue-600 transition-colors tracking-tighter block">{PHONE_1}</a>
+                      <a href={`tel:${PHONE_2.replace(/\s/g, '')}`} className="text-slate-600 font-bold text-2xl hover:text-blue-600 transition-colors tracking-tighter block">{PHONE_2}</a>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start space-x-6">
-                  <div className="p-4 bg-blue-900 text-white rounded-2xl shadow-lg">
-                    <Clock size={24} />
+
+                <div className="flex items-start space-x-8 group">
+                  <div className="p-5 bg-blue-900 text-white rounded-[1.5rem] shadow-xl flex-shrink-0 transition-transform group-hover:scale-110 duration-500">
+                    <Clock size={28} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-slate-900 text-lg">Horaires d'accueil</h4>
-                    <p className="text-slate-600">7j/7 de 9h à 19h (Saison)</p>
-                    <p className="text-slate-600 text-sm">Sur rendez-vous hors saison</p>
+                    <h4 className="font-bold text-slate-900 text-lg uppercase tracking-widest mb-2 italic">Horaires d'accueil</h4>
+                    <p className="text-slate-600 text-lg">Lundi au Samedi : <span className="text-blue-900 font-bold">09:00 — 18:00</span></p>
+                    <div className="mt-2 bg-blue-50 px-3 py-1 rounded-full text-[10px] text-blue-600 font-bold uppercase tracking-widest w-fit">Fermé le Dimanche</div>
                   </div>
                 </div>
               </div>
 
-              {/* Mock Map */}
-              <div className="w-full h-80 bg-slate-100 rounded-[2.5rem] border border-slate-200 overflow-hidden relative shadow-inner">
-                <div className="absolute inset-0 flex items-center justify-center flex-col text-slate-400">
-                  <MapPin size={48} className="mb-2 opacity-20" />
-                  <p className="font-bold uppercase tracking-widest text-xs opacity-50">Google Map Interactive</p>
-                  <p className="text-xs opacity-40">Centrée sur le Port de La Flotte</p>
+              {/* Decorative Element */}
+              <div className="relative p-10 bg-slate-50 rounded-[3rem] border border-slate-100 overflow-hidden shadow-inner group">
+                <Anchor className="absolute -bottom-10 -left-10 text-slate-200 opacity-20 group-hover:rotate-12 transition-transform duration-1000" size={240} />
+                <div className="relative z-10">
+                  <h5 className="font-serif italic text-2xl text-slate-900 mb-3">Vivez la mer autrement</h5>
+                  <p className="text-slate-500 font-light leading-relaxed">
+                    Toute l'année, Nautica Ré vous accompagne pour vos projets nautiques avec passion et expertise.
+                  </p>
                 </div>
-                {/* Visual indicator of the map */}
-                <img 
-                  src="https://picsum.photos/id/164/1000/600" 
-                  alt="Emplacement Nautica Ré" 
-                  className="w-full h-full object-cover opacity-60"
-                />
               </div>
             </div>
 
-            <div className="bg-slate-50 p-10 md:p-16 rounded-[2.5rem] border border-slate-100 shadow-sm">
-              <h2 className="text-3xl font-serif font-bold text-slate-900 mb-8">Envoyez-nous un message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Votre Nom</label>
-                  <input 
-                    type="text" 
-                    required
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
-                    placeholder="Ex: Jean Dupont"
-                    onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  />
+            <div className="bg-white p-12 md:p-16 rounded-[4rem] border border-slate-100 shadow-2xl self-start relative">
+              <div className="absolute top-0 right-10 w-20 h-1 bg-blue-600"></div>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-10 uppercase tracking-tight italic">Message Rapide</h2>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Nom complet</label>
+                    <input 
+                      type="text" 
+                      required
+                      className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium"
+                      placeholder="Ex: Sophie Martin"
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Email</label>
+                    <input 
+                      type="email" 
+                      required
+                      className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium"
+                      placeholder="sophie@email.com"
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Votre Email</label>
-                  <input 
-                    type="email" 
-                    required
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
-                    placeholder="votre@email.com"
-                    onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Votre besoin</label>
+                <div className="space-y-2">
+                  <label className="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Type de demande</label>
                   <select 
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all appearance-none cursor-pointer"
+                    className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all cursor-pointer text-sm font-bold uppercase tracking-widest"
                     onChange={(e) => setFormData({...formData, service: e.target.value})}
                   >
-                    <option value="permis">Passer mon Permis Bateau</option>
-                    <option value="location">Louer un Bateau</option>
-                    <option value="coaching">Coaching & Services</option>
-                    <option value="autre">Autre demande</option>
+                    <option value="permis">Permis Côtier</option>
+                    <option value="permis_ext">Extension Hauturier / Fluvial</option>
+                    <option value="location">Location de Bateau</option>
+                    <option value="coaching">Coaching nautique</option>
                   </select>
                 </div>
-                <div>
-                  <label className="block text-sm font-bold text-slate-700 mb-2">Message</label>
+                <div className="space-y-2">
+                  <label className="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Message</label>
                   <textarea 
                     rows={4}
-                    className="w-full bg-white border border-slate-200 rounded-xl px-4 py-4 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
-                    placeholder="Comment pouvons-nous vous aider ?"
+                    className="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium"
+                    placeholder="Décrivez votre projet nautique..."
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                   ></textarea>
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full bg-blue-900 hover:bg-blue-800 text-white font-bold py-5 rounded-xl shadow-lg transition-all active:scale-[0.98] flex items-center justify-center space-x-2"
+                  className="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-6 rounded-2xl shadow-xl transition-all active:scale-[0.98] flex items-center justify-center space-x-4 uppercase tracking-[0.2em] text-xs"
                 >
                   <Send size={20} />
-                  <span>Envoyer la demande</span>
+                  <span>Envoyer ma demande</span>
                 </button>
               </form>
-              <p className="text-center text-xs text-slate-400 mt-6">
-                En envoyant ce formulaire, vous acceptez d'être recontacté dans le cadre de votre demande.
-              </p>
             </div>
           </div>
         </div>
