@@ -34,5 +34,21 @@
 </head>
   <body class="bg-white text-gray-900 scroll-smooth">
     <div id="root"></div>
+  <script type="module">
+  import React from "react";
+  import { createRoot } from "react-dom/client";
+
+  const App = () => {
+    return (
+      React.createElement("h1", { className: "text-4xl text-center mt-20" },
+        "Nautica Ré – site en cours de construction"
+      )
+    );
+  };
+
+  createRoot(document.getElementById("root")).render(
+    React.createElement(App)
+  );
+</script>
   </body>
 </html>
