@@ -14,7 +14,6 @@ const Navigation: React.FC = () => {
     { name: 'Nos Permis', path: '/permis' },
     { name: 'Location', path: '/location' },
     { name: 'Équipe', path: '/equipe' },
-    { name: 'Contact', path: '/contact' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -66,19 +65,28 @@ const Navigation: React.FC = () => {
 
       {isOpen && (
         <div className="md:hidden bg-white border-t border-slate-100 animate-in slide-in-from-top duration-300">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
               <SafeLink
                 key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
-                className={`block px-3 py-4 text-base font-bold border-b border-slate-50 ${
+                className={`block py-4 text-base font-bold border-b border-slate-50 ${
                   isActive(link.path) ? 'text-blue-600' : 'text-slate-700'
                 }`}
               >
                 {link.name}
               </SafeLink>
             ))}
+            <div className="pt-4">
+              <SafeLink
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="block w-full bg-blue-900 text-white text-center px-6 py-4 rounded-xl text-base font-bold shadow-md"
+              >
+                Contact
+              </SafeLink>
+            </div>
           </div>
         </div>
       )}
