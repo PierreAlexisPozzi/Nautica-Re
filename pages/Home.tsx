@@ -11,30 +11,26 @@ const Home: React.FC = () => {
     <div className="pt-20">
       <SEO 
         title="Nautica Ré | Permis Bateau & Location de Bateaux Île de Ré" 
-        description="Passez votre permis bateau à La Flotte avec Nautica Ré. Formation accélérée, coaching personnalisé et location de bateaux sur l'Île de Ré avec Cypriane et Nicolas."
+        description="Passez votre permis bateau à La Flotte, Saint Martin de Ré ou Ars en Ré avec Nautica Ré. Formation accélérée, coaching personnalisé et location de bateaux sur l'Île de Ré avec Cypriane et Nicolas."
         schema={JSON_LD}
       />
 
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
         <img 
-          src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&q=80&w=2000" 
-          alt="Bateau école Nautica Ré au port de La Flotte" 
+          src="https://www.iledere.com/app/uploads/iledere/2024/07/thumbs/vue-aerienne-port-la-flotte-ile-de-re-par-edouard-salmon-skystudio-640x640.webp" 
+          alt="Bateau école Nautica Ré à La Flotte et Saint Martin de Ré" 
           className="absolute inset-0 w-full h-full object-cover opacity-60"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-transparent"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center space-x-2 bg-blue-600/20 backdrop-blur-md border border-blue-400/30 px-4 py-1.5 rounded-full text-blue-300 text-sm font-bold mb-6">
-              <Award size={16} />
-              <span>N°1 École de Navigation à l'Île de Ré</span>
-            </div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold leading-tight mb-8">
               Votre École de Navigation et Location de Bateaux à l'Île de Ré
             </h1>
             <p className="text-xl text-slate-200 mb-10 leading-relaxed font-light">
-              Située au cœur du Port de La Flotte en Charente-Maritime, Nautica Ré vous accompagne pour obtenir votre permis plaisance ou pour une location sécurisée.
+              Située à La Flotte en Ré en Charente-Maritime, Nautica Ré vous accompagne pour obtenir votre permis plaisance ou pour une location sécurisée.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <SafeLink 
@@ -61,8 +57,8 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative">
               <img 
-                src="https://picsum.photos/id/444/800/600" 
-                alt="Navigation au large de La Flotte" 
+                src="https://i.postimg.cc/SK55p539/Gemini-Generated-Image-iqynxxiqynxxiqyn.png" 
+                alt="Navigation autour de l'île de Ré" 
                 className="rounded-3xl shadow-2xl relative z-10"
               />
               <div className="absolute -bottom-8 -right-8 w-64 bg-blue-900 text-white p-8 rounded-3xl z-20 hidden md:block">

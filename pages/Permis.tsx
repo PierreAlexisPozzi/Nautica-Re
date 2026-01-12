@@ -68,7 +68,7 @@ const Permis: React.FC = () => {
                 <div className="space-y-12 relative">
                   {[
                     { title: "1. Inscription administrative", desc: "Constitution du dossier (cerfa, timbre fiscal, certificat médical). Nous nous occupons de l'enregistrement.", icon: <Ship size={24} /> },
-                    { title: "2. Validation du code", desc: "Apprentissage via notre plateforme puis examen théorique (QCM) dans un centre agréé.", icon: <Clock size={24} /> },
+                    { title: "2. Validation du code", desc: "Apprentissage via notre plateforme et dans nos locaux, puis examen théorique (QCM) dans un centre agréé.", icon: <Clock size={24} /> },
                     { title: "3. Formation pratique", desc: "Minimum 2 heures à la barre du bateau-école pour valider les manœuvres fondamentales avec votre moniteur.", icon: <Navigation size={24} /> }
                   ].map((step, i) => (
                     <div key={i} className="flex items-start space-x-8">
@@ -89,7 +89,7 @@ const Permis: React.FC = () => {
                   <MapPin className="mr-2" /> Lieu de formation
                 </h4>
                 <p className="text-blue-50 opacity-90 mb-6">
-                  Toute la formation (théorie et pratique) se déroule au Port de La Flotte, facilitant l'accès pour les locaux et vacanciers.
+                  La formation théorique se déroule dans nos locaux situés dans la Zone Artisanale de la Croix Michaud (à la Flotte) et la pratique au Port de La Flotte en Ré, facilitant l'accès pour les résidents et vacanciers.
                 </p>
                 <SafeLink to="/contact" className="block w-full py-4 bg-white text-blue-600 text-center font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg">
                   Réserver ma session
