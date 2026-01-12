@@ -1,7 +1,7 @@
 
 import React from 'react';
 import SEO from '../components/SEO';
-import { Ship, Clock, CheckCircle, Navigation, MapPin, Compass, Waves, Award, Anchor, Euro, ChevronRight } from 'lucide-react';
+import { Ship, Clock, CheckCircle, Navigation, MapPin, Compass, Waves, Award, Anchor, Euro, ChevronRight, Star } from 'lucide-react';
 import { JSON_LD } from '../constants';
 import SafeLink from '../components/SafeLink';
 
@@ -17,21 +17,52 @@ const Permis: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Tarifs Permis Bateau La Flotte | Nautica Ré" 
-        description="Passez votre permis côtier (330€ / 380€) à La Flotte en Ré. Formation complète théorie et pratique à l'Île de Ré ou La Rochelle."
+        title="Passer son Permis Bateau La Flotte | Formation Complète Nautica Ré" 
+        description="Passez votre permis côtier avec Nautica Ré. 5 jours de théorie + 2 jours de pratique. 98% de réussite. Inscription rapide au Port de La Flotte."
         schema={JSON_LD}
       />
 
       {/* Header */}
       <header className="relative bg-blue-900 py-32 text-white text-center overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 relative z-20">
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Prendre le Large</h1>
+           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 font-bold text-xs uppercase tracking-widest text-blue-100">
+             <Star size={14} className="text-yellow-400 fill-yellow-400" />
+             <span>Taux de réussite record de 98%</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Obtenez votre Permis</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-            Formations certifiantes pour tous les niveaux au départ de <strong>La Flotte en Ré</strong>.
+            Une formation de qualité : <strong>5 jours de théorie</strong> minimum puis <strong>2 jours de pratique</strong> au départ de La Flotte.
           </p>
         </div>
         <WaveDivider flip />
       </header>
+
+      {/* Persuasive Badge Section */}
+      <div className="bg-slate-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex items-center space-x-4">
+            <div className="bg-white p-4 rounded-2xl shadow-sm text-blue-600"><CheckCircle size={32} /></div>
+            <div>
+              <div className="font-bold text-slate-900 uppercase text-xs tracking-widest">Zéro Administratif</div>
+              <p className="text-sm text-slate-500">Nous gérons votre dossier de A à Z</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-white p-4 rounded-2xl shadow-sm text-blue-600"><Star size={32} /></div>
+            <div>
+              <div className="font-bold text-slate-900 uppercase text-xs tracking-widest">Tests Blancs</div>
+              <p className="text-sm text-slate-500">Entraînement illimité en conditions réelles</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="bg-white p-4 rounded-2xl shadow-sm text-blue-600"><Award size={32} /></div>
+            <div>
+              <div className="font-bold text-slate-900 uppercase text-xs tracking-widest">Vrai Savoir-Faire</div>
+              <p className="text-sm text-slate-500">Pratique intensive pour naviguer serein</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Permis Côtier Detail */}
       <section className="relative py-20 bg-white">
@@ -40,63 +71,61 @@ const Permis: React.FC = () => {
             <div className="lg:w-1/2 space-y-8">
               <div className="flex items-center space-x-2 text-blue-600 font-bold uppercase text-xs tracking-widest">
                 <Award size={16} />
-                <span>Le choix de la sécurité</span>
+                <span>La formule d'Excellence</span>
               </div>
               <h2 className="text-4xl font-serif font-bold text-slate-900 italic">Le Permis Côtier</h2>
               <div className="bg-blue-50 p-8 rounded-[2.5rem] border-l-8 border-blue-600 shadow-sm relative overflow-hidden">
                 <Anchor className="absolute -right-4 -bottom-4 text-blue-100 opacity-20" size={120} />
                 <p className="text-lg text-slate-700 leading-relaxed font-medium italic relative z-10">
-                  "Avec ce permis, vous pourrez naviguer en eaux maritimes, sur les lacs et plans d’eau fermés sans limite de puissance moteur ni de taille de navire, jusqu’à 6 milles d’un abri."
+                  "Une formation sérieuse en 7 jours pour naviguer sur tout type de navire à moteur, sans limite de puissance, jusqu'à 6 milles des côtes."
                 </p>
               </div>
               <p className="text-slate-600 leading-relaxed font-light text-lg">
-                Chez Nautica Ré, la formation comprend des cours théoriques dans nos locaux avec des entrainements au test final, et 2h de pratique en mer sur l’Île De Ré ou La Rochelle, à bord d’un semi-rigide.
+                Nicolas & Cypriane, deux amis passionnés par la mer, vous accueillent dans nos bureaux de <strong>La Flotte</strong>. Notre cursus privilégie le temps d'apprentissage : 5 jours de théorie pour maîtriser le code maritime, suivis de 2 jours de pratique intensive.
               </p>
               
-              <div className="flex flex-wrap gap-4 pt-4">
-                <div className="flex items-center space-x-3 text-slate-700 font-bold bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100">
-                  <MapPin className="text-blue-600" size={20} />
-                  <span>Siège à La Flotte</span>
-                </div>
-                <div className="flex items-center space-x-3 text-slate-700 font-bold bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100">
-                  <Ship className="text-blue-600" size={20} />
-                  <span>Pratique au choix</span>
-                </div>
+              <div className="bg-slate-900 text-white p-8 rounded-3xl shadow-xl">
+                 <h4 className="font-serif italic text-xl mb-4 text-blue-400">Pourquoi nous choisir ?</h4>
+                 <ul className="space-y-3 text-sm">
+                   <li className="flex items-center"><CheckCircle size={16} className="mr-3 text-green-400" /> Groupes restreints pour un suivi réel</li>
+                   <li className="flex items-center"><CheckCircle size={16} className="mr-3 text-green-400" /> Bateau de pratique récent et maniable</li>
+                   <li className="flex items-center"><CheckCircle size={16} className="mr-3 text-green-400" /> Conseils d'experts sur les pertuis locaux</li>
+                 </ul>
               </div>
             </div>
 
-            {/* Price Cards with non-horizontal layout focus */}
+            {/* Price Cards */}
             <div className="lg:w-1/2 w-full flex flex-col gap-8">
               <div className="bg-white border-2 border-slate-100 rounded-[2.5rem] p-10 shadow-xl flex flex-col md:flex-row items-center gap-8 group hover:border-blue-600 transition-all transform hover:-rotate-1">
                 <div className="text-center md:text-left flex-shrink-0">
-                  <h4 className="text-xl font-serif font-bold mb-2">Formule 5h</h4>
+                  <h4 className="text-xl font-serif font-bold mb-2">Pack Classique</h4>
                   <div className="text-5xl font-bold text-blue-900 tracking-tighter">330€</div>
                   <p className="text-[10px] text-slate-400 mt-2 uppercase tracking-widest font-bold">Théorie & Pratique</p>
                 </div>
                 <div className="border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-8 flex-grow">
                   <ul className="space-y-3 text-sm">
-                    <li className="flex items-center text-slate-700"><Clock size={16} className="mr-3 text-blue-600" /> 5h de cours théorique</li>
-                    <li className="flex items-center text-slate-700"><Ship size={16} className="mr-3 text-blue-600" /> 2h de pratique en mer</li>
-                    <li className="flex items-center text-slate-700 font-bold"><CheckCircle size={16} className="mr-3 text-green-500" /> Livret de formation inclus</li>
+                    <li className="flex items-center text-slate-700"><Clock size={16} className="mr-3 text-blue-600" /> 5j de cours théorique</li>
+                    <li className="flex items-center text-slate-700"><Ship size={16} className="mr-3 text-blue-600" /> 2j de pratique (mer)</li>
+                    <li className="flex items-center text-slate-700 font-bold"><CheckCircle size={16} className="mr-3 text-green-500" /> Livret de formation offert</li>
                   </ul>
-                  <SafeLink to="/contact" className="mt-6 bg-blue-600 text-white text-center py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-colors block w-full">Choisir 5h</SafeLink>
+                  <SafeLink to="/contact" className="mt-6 bg-blue-600 text-white text-center py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-blue-700 transition-colors block w-full">S'inscrire à la prochaine session</SafeLink>
                 </div>
               </div>
 
               <div className="bg-slate-900 text-white rounded-[2.5rem] p-10 shadow-2xl flex flex-col md:flex-row items-center gap-8 transform hover:rotate-1 transition-all">
-                <div className="text-center md:text-left flex-shrink-0">
-                  <div className="bg-blue-500 text-white text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tighter font-bold absolute -top-3 left-10">Recommandé</div>
-                  <h4 className="text-xl font-serif font-bold mb-2">Formule 8h</h4>
+                <div className="text-center md:text-left flex-shrink-0 relative">
+                  <div className="bg-blue-500 text-white text-[9px] px-2 py-0.5 rounded-full uppercase tracking-tighter font-bold absolute -top-4 left-0">Formule Sérénité</div>
+                  <h4 className="text-xl font-serif font-bold mb-2">Pack Premium</h4>
                   <div className="text-5xl font-bold text-blue-400 tracking-tighter">380€</div>
-                  <p className="text-[10px] text-slate-500 mt-2 uppercase tracking-widest font-bold">Théorie Approfondie</p>
+                  <p className="text-[10px] text-slate-500 mt-2 uppercase tracking-widest font-bold">Réussite Maximum</p>
                 </div>
                 <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8 flex-grow">
                   <ul className="space-y-3 text-sm">
-                    <li className="flex items-center text-slate-300"><Clock size={16} className="mr-3 text-blue-400" /> 8h de cours théorique</li>
-                    <li className="flex items-center text-slate-300"><Ship size={16} className="mr-3 text-blue-400" /> 2h de pratique en mer</li>
-                    <li className="flex items-center text-slate-300 font-bold"><CheckCircle size={16} className="mr-3 text-green-400" /> Livret de formation inclus</li>
+                    <li className="flex items-center text-slate-300"><Clock size={16} className="mr-3 text-blue-400" /> 5j théorie + Renforcement</li>
+                    <li className="flex items-center text-slate-300"><Ship size={16} className="mr-3 text-blue-400" /> 2j de pratique (mer)</li>
+                    <li className="flex items-center text-slate-300 font-bold"><CheckCircle size={16} className="mr-3 text-green-400" /> Accès code en ligne illimité 24/7</li>
                   </ul>
-                  <SafeLink to="/contact" className="mt-6 bg-blue-500 text-white text-center py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-blue-400 transition-colors block w-full">Choisir 8h</SafeLink>
+                  <SafeLink to="/contact" className="mt-6 bg-blue-500 text-white text-center py-4 rounded-xl font-bold uppercase tracking-widest text-[10px] hover:bg-blue-400 transition-colors block w-full">Vérifier le planning</SafeLink>
                 </div>
               </div>
             </div>
@@ -116,11 +145,11 @@ const Permis: React.FC = () => {
               <div className="bg-blue-600 text-white p-5 rounded-2xl w-fit mb-8 shadow-xl relative z-10"><Compass size={36} /></div>
               <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6 italic relative z-10">Extension Hauturière</h3>
               <p className="text-slate-600 leading-relaxed mb-10 flex-grow font-light text-lg relative z-10">
-                Ce permis est indispensable pour naviguer sans limite de distance. La formation porte sur la lecture de cartes marines, le calcul des marées et les caps pour naviguer sereinement en haute mer.
+                Allez plus loin ! Ce permis vous permet de naviguer sans limite de distance des côtes. Apprenez la navigation astronomique et la lecture de cartes experte.
               </p>
               <div className="pt-8 border-t border-slate-100 relative z-10">
                 <SafeLink to="/contact" className="text-blue-600 font-bold hover:text-blue-800 flex items-center uppercase tracking-widest text-xs italic group/link">
-                  Tarifs & Devis <Euro size={14} className="ml-2" />
+                  Demander un devis personnalisé <Euro size={14} className="ml-2" />
                   <ChevronRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                 </SafeLink>
               </div>
@@ -133,11 +162,11 @@ const Permis: React.FC = () => {
               <div className="bg-blue-600 text-white p-5 rounded-2xl w-fit mb-8 shadow-xl relative z-10"><Waves size={36} /></div>
               <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6 italic relative z-10">Option Fluviale</h3>
               <p className="text-slate-600 leading-relaxed mb-10 flex-grow font-light text-lg relative z-10">
-                Ouvrez-vous les portes des canaux et rivières. Apprenez le balisage spécifique, les règles de croisement et la signalisation fluviale pour piloter en eaux douces.
+                Envie de naviguer sur les canaux de France ? Cette option vous ouvre les portes des eaux douces et de la vie au fil de l'eau.
               </p>
               <div className="pt-8 border-t border-slate-100 relative z-10">
                 <SafeLink to="/contact" className="text-blue-600 font-bold hover:text-blue-800 flex items-center uppercase tracking-widest text-xs italic group/link">
-                  Tarifs & Devis <Euro size={14} className="ml-2" />
+                  Se renseigner <Euro size={14} className="ml-2" />
                   <ChevronRight size={14} className="ml-1 group-hover/link:translate-x-1 transition-transform" />
                 </SafeLink>
               </div>
@@ -151,13 +180,13 @@ const Permis: React.FC = () => {
       <section className="relative py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <Anchor size={48} className="mx-auto text-blue-900 mb-8 opacity-20" />
-          <h3 className="text-3xl font-serif font-bold mb-6 italic text-slate-900 tracking-tight">Une formation locale et sur-mesure</h3>
+          <h3 className="text-3xl font-serif font-bold mb-6 italic text-slate-900 tracking-tight">Appelez-nous, on vous explique tout !</h3>
           <p className="text-xl text-slate-600 leading-relaxed mb-10 font-light">
-            Notre école de <strong>La Flotte</strong> s'adapte à votre rythme. La théorie se déroule dans nos locaux au bureau, et vous choisissez votre lieu de pratique pour vos 2h en mer.
+            On sait que passer son permis peut impressionner. Nicolas ou Cypriane vous répondent en direct pour lever vos doutes. <strong>Pas de boîte vocale, de vrais marins au téléphone !</strong>
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <span className="bg-slate-50 px-8 py-3 rounded-full text-xs font-bold border border-slate-200 uppercase tracking-widest text-slate-500 italic">Port de La Flotte</span>
-            <span className="bg-slate-50 px-8 py-3 rounded-full text-xs font-bold border border-slate-200 uppercase tracking-widest text-slate-500 italic">Port des Minimes</span>
+            <a href="tel:0688772630" className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-blue-500 transition-all uppercase text-sm tracking-widest">Appeler Nicolas</a>
+            <a href="tel:0688770154" className="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-slate-800 transition-all uppercase text-sm tracking-widest">Appeler Cypriane</a>
           </div>
         </div>
       </section>

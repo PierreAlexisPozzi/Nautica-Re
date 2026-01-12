@@ -8,7 +8,7 @@ const Team: React.FC = () => {
     <div className="pt-20">
       <SEO 
         title="L'Équipe Nautica Ré | Experts Permis Bateau Île de Ré" 
-        description="Faites connaissance avec Cypriane et Nicolas, fondateurs de Nautica Ré. Moniteurs diplômés et passionnés de navigation à l'île de Ré."
+        description="Faites connaissance avec Cypriane et Nicolas, fondateurs de Nautica Ré. Amis passionnés de navigation et moniteurs diplômés à l'île de Ré."
       />
 
       <section className="py-24 bg-white">
@@ -16,7 +16,7 @@ const Team: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center mb-20">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-8">Les Fondateurs de Nautica Ré : Cypriane & Nicolas</h1>
             <p className="text-xl text-slate-600 leading-relaxed font-light">
-              Nautica Ré est née de la rencontre de deux experts du nautisme souhaitant partager leur amour de la mer et leur savoir-faire.
+              Nautica Ré est née de la complicité de deux amis passionnés par le nautisme souhaitant partager leur amour de la mer et leur savoir-faire.
             </p>
           </div>
 
@@ -37,7 +37,7 @@ const Team: React.FC = () => {
             <div className="space-y-8">
               <h2 className="text-3xl font-serif font-bold text-slate-900">Une école à taille humaine</h2>
               <p className="text-lg text-slate-600 leading-relaxed">
-                Cypriane et Nicolas, gérants et moniteurs, apportent leur rigueur et leur passion pour la transmission. Ensemble, ils ont créé un espace où l'on apprend avec sérieux mais toujours dans la convivialité.
+                Cypriane et Nicolas, gérants et moniteurs, apportent leur rigueur et leur passion pour la transmission. En tant qu'amis et professionnels, ils ont créé un espace où l'on apprend avec sérieux mais toujours dans la convivialité.
               </p>
               
               <div className="space-y-6 pt-4">

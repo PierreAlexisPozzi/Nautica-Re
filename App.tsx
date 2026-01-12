@@ -1,12 +1,13 @@
 
 import React from 'react';
-import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import StickyCTA from './components/StickyCTA';
 import Home from './pages/Home';
 import Permis from './pages/Permis';
 import Location from './pages/Location';
+import Coaching from './pages/Coaching';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 
@@ -20,6 +21,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             <Route path="/permis" element={<Permis />} />
             <Route path="/location" element={<Location />} />
+            <Route path="/coaching" element={<Coaching />} />
             <Route path="/equipe" element={<Team />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

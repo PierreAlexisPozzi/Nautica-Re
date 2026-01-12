@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm">
               <li><SafeLink to="/permis" className="hover:text-white transition-colors">Permis Côtier & Hauturier</SafeLink></li>
               <li><SafeLink to="/location" className="hover:text-white transition-colors">Location (Port de La Flotte)</SafeLink></li>
-              <li><SafeLink to="/location" className="hover:text-white transition-colors">Coaching Manœuvres</SafeLink></li>
+              <li><SafeLink to="/coaching" className="hover:text-white transition-colors">Coaching & Skippering</SafeLink></li>
               <li><SafeLink to="/permis" className="hover:text-white transition-colors">Permis Eaux Intérieures</SafeLink></li>
             </ul>
           </div>
