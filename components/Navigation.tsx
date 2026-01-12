@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
                 className="flex items-center justify-center space-x-3 bg-blue-50 text-blue-600 w-full py-4 rounded-xl font-bold"
               >
                 <Phone size={20} />
-                <span>Cypriane & Nicolas</span>
+                <span>Appeler Nicolas ou Cypriane</span>
               </a>
               <SafeLink
                 to="/contact"

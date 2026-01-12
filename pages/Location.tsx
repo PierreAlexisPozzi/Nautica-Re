@@ -1,8 +1,7 @@
 
 import React from 'react';
 import SEO from '../components/SEO';
-// Added ChevronRight to the imports to resolve the missing reference on line 97
-import { Ship, Users, Zap, Info, Phone, Mail, Anchor, ChevronRight } from 'lucide-react';
+import { Ship, Users, Zap, MapPin, CheckCircle, Anchor, Phone, Mail, Info, Waves, Target, ChevronRight, Shield } from 'lucide-react';
 import { BOATS, PHONE_1, PHONE_2 } from '../constants';
 import SafeLink from '../components/SafeLink';
 
@@ -18,20 +17,16 @@ const Location: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Location Bateaux La Flotte en Ré | Flotte Nautica Ré" 
-        description="Location de bateaux exclusivement au Port de La Flotte. Semi-rigides, coques open. Partez explorer les pertuis dès aujourd'hui."
+        title="Location Bateaux La Flotte en Ré | Nautica Ré" 
+        description="Location de bateaux exclusivement au Port de La Flotte. Semi-rigides, coques open. Profitez d'une flotte moderne pour vos sorties en mer."
       />
 
       {/* Header */}
       <header className="relative bg-blue-900 py-32 text-white text-center overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 relative z-20">
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 font-bold text-xs uppercase tracking-widest text-blue-100">
-             <Anchor size={14} className="text-blue-400" />
-             <span>Exclusivité Port de La Flotte</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic tracking-tight">Large & Liberté</h1>
+          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Louez votre Bateau</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-            Louez votre unité au <strong>Port de La Flotte</strong> pour explorer l'archipel charentais.
+            Une flotte de qualité au départ du <strong>Port de La Flotte</strong> pour explorer l'archipel charentais.
           </p>
         </div>
         <WaveDivider flip />
@@ -48,12 +43,12 @@ const Location: React.FC = () => {
       <section className="relative py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="mb-16 text-center md:text-left">
-            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4 italic">Notre Flotte de Location</h2>
-            <p className="text-slate-500 text-lg italic uppercase tracking-wider text-xs font-bold">Sélection d'unités récentes et fiables</p>
+          <div className="mb-16">
+            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4 italic text-center">Notre Flotte</h2>
+            <p className="text-slate-500 text-lg italic uppercase tracking-wider text-xs font-bold text-center">Disponibles au Port de La Flotte en Ré</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-32">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
             {BOATS.map((boat, idx) => (
               <div key={boat.id} className={`bg-white rounded-[3rem] border border-slate-200 overflow-hidden shadow-sm hover:shadow-2xl transition-all group ${idx === 1 ? 'md:-translate-y-4' : ''}`}>
                 <div className="relative h-80 overflow-hidden">
@@ -90,36 +85,27 @@ const Location: React.FC = () => {
             ))}
           </div>
 
-          <div className="mb-20 text-center">
-             <h3 className="text-3xl font-serif font-bold text-slate-900 mb-6 italic">Besoin d'un accompagnement ?</h3>
-             <p className="text-slate-600 mb-10 max-w-2xl mx-auto font-light">
-                Vous n'avez pas encore votre permis ou vous souhaitez profiter de votre sortie sans gérer la navigation ? Découvrez nos services de skippering.
-             </p>
-             <SafeLink to="/coaching" className="inline-flex items-center space-x-3 bg-blue-600 text-white px-10 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs shadow-xl hover:bg-blue-500 transition-all">
-                <span>Voir le Coaching & Skippering</span>
-                <ChevronRight size={18} />
-             </SafeLink>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-             <div className="bg-blue-900 p-12 rounded-[3.5rem] text-white flex items-center space-x-8 shadow-2xl relative overflow-hidden group">
+          {/* Quick Contact Bar */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
+             <div className="bg-blue-600 p-12 rounded-[3.5rem] text-white flex items-center space-x-8 shadow-2xl relative overflow-hidden group">
                 <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:rotate-12 transition-transform duration-700"><Phone size={120} /></div>
-                <div className="bg-white/10 p-6 rounded-[2rem] hidden sm:block relative z-10"><Phone size={48} /></div>
+                <div className="bg-white/20 p-6 rounded-[2rem] hidden sm:block relative z-10"><Phone size={48} /></div>
                 <div className="relative z-10">
                    <h4 className="text-xl font-serif font-bold mb-2 italic">Réservations Directes</h4>
                    <div className="flex flex-col space-y-2">
-                      <a href={`tel:${PHONE_1.replace(/\s/g, '')}`} className="text-3xl font-serif font-bold hover:text-blue-400 transition-colors tracking-tighter">{PHONE_1}</a>
-                      <a href={`tel:${PHONE_2.replace(/\s/g, '')}`} className="text-3xl font-serif font-bold hover:text-blue-400 transition-colors tracking-tighter">{PHONE_2}</a>
+                      <a href={`tel:${PHONE_1.replace(/\s/g, '')}`} className="text-3xl font-serif font-bold hover:underline tracking-tighter">{PHONE_1}</a>
+                      <a href={`tel:${PHONE_2.replace(/\s/g, '')}`} className="text-3xl font-serif font-bold hover:underline tracking-tighter">{PHONE_2}</a>
                    </div>
                 </div>
              </div>
-             <div className="bg-slate-50 p-12 rounded-[3.5rem] text-slate-900 flex items-center space-x-8 shadow-xl border border-slate-200 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:-rotate-12 transition-transform duration-700"><Mail size={120} /></div>
-                <div className="bg-blue-600/10 p-6 rounded-[2rem] hidden sm:block relative z-10"><Mail size={48} className="text-blue-600" /></div>
+             <div className="bg-slate-900 p-12 rounded-[3.5rem] text-white flex items-center space-x-8 shadow-2xl relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:-rotate-12 transition-transform duration-700"><Anchor size={120} /></div>
                 <div className="relative z-10">
-                   <h4 className="text-xl font-serif font-bold mb-2 italic text-slate-900">Demande par Email</h4>
-                   <p className="text-slate-400 mb-3 text-[10px] uppercase font-bold tracking-[0.2em]">Réponse sous 24h</p>
-                   <a href="mailto:contact@nautica-re.fr" className="text-2xl font-serif font-bold hover:text-blue-600 transition-colors tracking-tight">contact@nautica-re.fr</a>
+                   <h4 className="text-xl font-serif font-bold mb-2 italic">Besoin d'un Coaching ?</h4>
+                   <p className="text-slate-400 mb-6 text-sm">Vous ne vous sentez pas encore à l'aise pour sortir seul ?</p>
+                   <SafeLink to="/coaching" className="inline-flex items-center text-blue-400 font-bold hover:text-white transition-colors group/link uppercase tracking-widest text-xs">
+                     Voir nos formules coaching <ChevronRight size={16} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
+                   </SafeLink>
                 </div>
              </div>
           </div>

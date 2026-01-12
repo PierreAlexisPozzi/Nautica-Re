@@ -30,8 +30,8 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs border-b border-white/10 pb-2">Prestations</h4>
             <ul className="space-y-4 text-sm">
               <li><SafeLink to="/permis" className="hover:text-white transition-colors">Permis Côtier & Hauturier</SafeLink></li>
-              <li><SafeLink to="/location" className="hover:text-white transition-colors">Location (Port de La Flotte)</SafeLink></li>
-              <li><SafeLink to="/coaching" className="hover:text-white transition-colors">Coaching & Skippering</SafeLink></li>
+              <li><SafeLink to="/location" className="hover:text-white transition-colors">Location de Bateaux</SafeLink></li>
+              <li><SafeLink to="/coaching" className="hover:text-white transition-colors">Coaching & Accompagnement</SafeLink></li>
               <li><SafeLink to="/permis" className="hover:text-white transition-colors">Permis Eaux Intérieures</SafeLink></li>
             </ul>
           </div>

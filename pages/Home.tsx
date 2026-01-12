@@ -124,7 +124,7 @@ const Home: React.FC = () => {
               <p className="text-slate-600 mb-6 leading-relaxed relative z-10 font-medium">
                 Nicolas & Cypriane vous coachent pour vos premières manœuvres. Gagnez en confiance avec des pros.
               </p>
-              <SafeLink to="/location" className="text-blue-600 font-bold flex items-center hover:text-blue-800 uppercase text-xs tracking-widest relative z-10">
+              <SafeLink to="/coaching" className="text-blue-600 font-bold flex items-center hover:text-blue-800 uppercase text-xs tracking-widest relative z-10">
                 Prendre un cours <ChevronRight size={14} className="ml-1" />
               </SafeLink>
             </article>

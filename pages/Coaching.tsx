@@ -1,7 +1,7 @@
 
 import React from 'react';
 import SEO from '../components/SEO';
-import { Target, CheckCircle, Anchor, Shield, Users, Ship, Waves, ChevronRight, Compass, ShieldAlert } from 'lucide-react';
+import { Target, CheckCircle, Anchor, Shield, Users, Waves, Navigation, ChevronRight, Star } from 'lucide-react';
 import { PHONE_1, PHONE_2 } from '../constants';
 import SafeLink from '../components/SafeLink';
 
@@ -18,161 +18,123 @@ const Coaching: React.FC = () => {
     <div className="pt-20">
       <SEO 
         title="Coaching Nautique & Skippering Île de Ré | Nautica Ré" 
-        description="Services de skipper et moniteur BPjeps à l'île de Ré. Accompagnement propriétaires et mise en main technique de votre bateau."
+        description="Améliorez votre navigation avec nos moniteurs diplômés. Skippering, manœuvres de port, prise en main de votre nouveau bateau à La Flotte et La Rochelle."
       />
 
       {/* Header */}
-      <header className="relative bg-slate-900 py-32 text-white text-center overflow-hidden">
+      <header className="relative bg-blue-900 py-32 text-white text-center overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 relative z-20">
-          <div className="inline-flex items-center space-x-2 bg-blue-500/20 backdrop-blur-md px-4 py-2 rounded-full border border-blue-400/30 mb-8 font-bold text-xs uppercase tracking-widest text-blue-100 italic">
-            <Compass size={14} className="text-blue-400" />
-            <span>Accompagnement Sur-Mesure</span>
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 mb-8 font-bold text-xs uppercase tracking-widest text-blue-100">
+             <Star size={14} className="text-yellow-400 fill-yellow-400" />
+             <span>Moniteurs diplômés BPJEPS</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Coaching & Skippering</h1>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-            Profitez de l'expertise de nos moniteurs diplômés pour une navigation en toute sérénité.
+          <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Accompagnement & Coaching</h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
+            Gagnez en assurance et maîtrisez votre unité avec l'expertise de <strong>Nicolas & Cypriane</strong>.
           </p>
         </div>
         <WaveDivider flip />
       </header>
 
-      {/* Section 1: Skipper/Moniteur pour Propriétaires & Locataires */}
-      <section className="relative py-24 bg-white">
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
-             <div className="space-y-8">
-                <div className="flex items-center space-x-3 text-blue-600 font-bold uppercase tracking-widest text-xs">
-                   <Users size={20} />
-                   <span>Skipper & Moniteur BPjeps</span>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
+            <div className="space-y-8">
+              <div className="flex items-center space-x-3 text-blue-600 font-bold uppercase tracking-widest text-xs">
+                <Target size={20} />
+                <span>Pour locataires & propriétaires</span>
+              </div>
+              <h2 className="text-4xl font-serif font-bold text-slate-900 italic leading-tight">Naviguez avec assurance</h2>
+              <p className="text-lg text-slate-600 leading-relaxed font-light">
+                Vous êtes propriétaire ou locataire d'un bateau et vous cherchez un <strong>skipper</strong> ou un <strong>moniteur professionnel</strong> pour quelques heures ou une journée entière ? Nautica Ré met son savoir-faire à votre service pour transformer votre navigation en pur plaisir.
+              </p>
+              
+              <div className="bg-slate-50 p-8 rounded-[2.5rem] border-l-8 border-blue-600 shadow-sm">
+                <ul className="space-y-4">
+                  <li className="flex items-start space-x-4">
+                    <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-slate-700 font-medium italic">Manœuvres de port délicates (vent, courant)</span>
+                  </li>
+                  <li className="flex items-start space-x-4">
+                    <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-slate-700 font-medium italic">Navigation dans les pertuis (lecture de carte, balisage)</span>
+                  </li>
+                  <li className="flex items-start space-x-4">
+                    <CheckCircle className="text-green-500 mt-1 flex-shrink-0" size={20} />
+                    <span className="text-slate-700 font-medium italic">Utilisation de l'électronique de bord</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="relative group">
+               <div className="absolute -inset-4 bg-blue-600/5 rounded-[4rem] blur-2xl"></div>
+               <img 
+                 src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=800" 
+                 alt="Coaching en mer" 
+                 className="rounded-[3rem] shadow-2xl relative z-10 grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
+               />
+            </div>
+          </div>
+
+          {/* New Owners Special */}
+          <div className="bg-slate-900 text-white rounded-[4rem] p-12 md:p-20 relative overflow-hidden shadow-2xl">
+             <Waves className="absolute bottom-[-100px] right-[-100px] text-blue-500/10 w-[30rem] h-[30rem]" />
+             <div className="relative z-10">
+                <div className="max-w-3xl mb-16">
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-blue-400 italic">Prise en main : Spécial Nouveaux Acquéreurs</h3>
+                  <p className="text-slate-300 text-lg font-light leading-relaxed">
+                    Vous venez d'acheter votre premier bateau ? Félicitations ! Nous vous proposons une séance sur-mesure sur votre propre unité pour sécuriser vos premières sorties.
+                  </p>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-slate-900 leading-tight">
-                  Vous cherchez un skipper pour une heure ou la journée ?
-                </h2>
-                <p className="text-lg text-slate-600 leading-relaxed font-light">
-                   Vous êtes propriétaire ou locataire d'un bateau et vous souhaitez déléguer la navigation ou être accompagné par un expert ? Que ce soit pour une navigation technique ou une sortie détente, vous apprécierez :
-                </p>
-                <div className="bg-blue-50 p-10 rounded-[3rem] border border-blue-100 shadow-sm">
-                   <ul className="space-y-6">
-                      <li className="flex items-center space-x-4">
-                         <div className="bg-white p-2 rounded-full text-blue-600 shadow-sm"><CheckCircle size={20} /></div>
-                         <span className="font-semibold text-slate-800 italic">Le professionnalisme de nos skippers diplômés</span>
-                      </li>
-                      <li className="flex items-center space-x-4">
-                         <div className="bg-white p-2 rounded-full text-blue-600 shadow-sm"><CheckCircle size={20} /></div>
-                         <span className="font-semibold text-slate-800 italic">L'ambiance conviviale et pédagogique du bord</span>
-                      </li>
-                      <li className="flex items-center space-x-4">
-                         <div className="bg-white p-2 rounded-full text-blue-600 shadow-sm"><CheckCircle size={20} /></div>
-                         <span className="font-semibold text-slate-800 italic">La sécurité absolue pendant toute la navigation</span>
-                      </li>
-                      <li className="flex items-center space-x-4">
-                         <div className="bg-white p-2 rounded-full text-blue-600 shadow-sm"><CheckCircle size={20} /></div>
-                         <span className="font-semibold text-slate-800 italic">La grande disponibilité de nos équipages</span>
-                      </li>
-                   </ul>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  <div className="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col space-y-4 hover:bg-white/10 transition-colors">
+                     <div className="text-blue-400 bg-blue-400/10 p-4 rounded-2xl w-fit"><Anchor size={28} /></div>
+                     <h5 className="font-bold text-xl italic">Initiation Technique</h5>
+                     <p className="text-slate-400 text-sm leading-relaxed">Vérification des points clés du moteur, de l'accastillage et des spécificités de votre bateau.</p>
+                  </div>
+                  <div className="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col space-y-4 hover:bg-white/10 transition-colors">
+                     <div className="text-blue-400 bg-blue-400/10 p-4 rounded-2xl w-fit"><Shield size={28} /></div>
+                     <h5 className="font-bold text-xl italic">Audit Sécurité</h5>
+                     <p className="text-slate-400 text-sm leading-relaxed">Installation et revue du matériel obligatoire. Briefing sécurité pour votre équipage et votre famille.</p>
+                  </div>
+                  <div className="bg-white/5 p-8 rounded-3xl border border-white/10 flex flex-col space-y-4 hover:bg-white/10 transition-colors">
+                     <div className="text-blue-400 bg-blue-400/10 p-4 rounded-2xl w-fit"><Navigation size={28} /></div>
+                     <h5 className="font-bold text-xl italic">Perfectionnement</h5>
+                     <p className="text-slate-400 text-sm leading-relaxed">Apprentissage des manœuvres portuaires spécifiques à votre emplacement et gestion du stress au port.</p>
+                  </div>
                 </div>
-             </div>
-             <div className="relative">
-                <div className="absolute -inset-4 bg-blue-600/5 rounded-[4rem] blur-3xl"></div>
-                <img 
-                   src="https://images.unsplash.com/photo-1544551763-47a184230181?auto=format&fit=crop&q=80&w=800" 
-                   className="rounded-[3rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3]" 
-                   alt="Accompagnement skipper Nautica Ré"
-                />
+
+                <div className="mt-16 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+                   <div className="flex items-center space-x-4">
+                      <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center font-bold text-2xl shadow-lg">!</div>
+                      <p className="text-slate-300 font-medium italic max-w-sm">Chaque coaching est unique et adapté à votre niveau, de débutant à confirmé.</p>
+                   </div>
+                   <SafeLink to="/contact" className="bg-blue-500 text-white px-10 py-5 rounded-2xl font-bold hover:bg-blue-400 transition-all shadow-xl uppercase tracking-widest text-sm flex items-center">
+                      Réserver ma séance <ChevronRight size={20} className="ml-2" />
+                   </SafeLink>
+                </div>
              </div>
           </div>
+
+          {/* Contact Bar */}
+          <div className="mt-24 text-center">
+             <h3 className="text-3xl font-serif font-bold text-slate-900 mb-10 italic">Prêt à prendre la barre ?</h3>
+             <div className="flex flex-wrap justify-center gap-6">
+                <a href={`tel:${PHONE_1.replace(/\s/g, '')}`} className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-blue-500 transition-all flex items-center space-x-3 uppercase tracking-widest text-xs">
+                  <span>Appeler Nicolas</span>
+                  <span className="opacity-60 text-[10px]">{PHONE_1}</span>
+                </a>
+                <a href={`tel:${PHONE_2.replace(/\s/g, '')}`} className="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-slate-800 transition-all flex items-center space-x-3 uppercase tracking-widest text-xs">
+                  <span>Appeler Cypriane</span>
+                  <span className="opacity-60 text-[10px]">{PHONE_2}</span>
+                </a>
+             </div>
+          </div>
+
         </div>
-      </section>
-
-      {/* Section 2: Nouveaux acquéreurs - Technique */}
-      <section className="relative py-24 bg-slate-50 overflow-hidden">
-        <WaveDivider color="fill-white" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative z-20">
-           <div className="text-center max-w-3xl mx-auto mb-20">
-              <div className="flex justify-center mb-6">
-                <div className="bg-blue-600 text-white p-4 rounded-2xl shadow-xl"><Target size={32} /></div>
-              </div>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-slate-900 mb-6 italic">Vous venez d'acquérir votre bateau ?</h2>
-              <p className="text-xl text-slate-600 font-light leading-relaxed">
-                Vous souhaitez mettre en pratique et approfondir vos compétences ? Nautica Ré vous propose un programme de perfectionnement sur-mesure.
-              </p>
-           </div>
-
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-12 rounded-[3.5rem] shadow-xl border border-slate-100 flex flex-col space-y-6 transition-transform hover:-translate-y-2">
-                 <div className="text-blue-600 flex items-center space-x-4">
-                    <Ship size={28} />
-                    <h3 className="text-2xl font-serif font-bold italic">Maîtrise & Conduite</h3>
-                 </div>
-                 <p className="text-slate-600 leading-relaxed font-light">
-                    Apprenez à dompter votre nouvelle unité avec assurance.
-                 </p>
-                 <ul className="space-y-4 pt-4 border-t border-slate-100">
-                    <li className="flex items-center space-x-3 text-sm font-medium text-slate-700">
-                       <ChevronRight className="text-blue-600" size={16} />
-                       <span>L'initiation ou le perfectionnement des manœuvres (voile ou moteur)</span>
-                    </li>
-                    <li className="flex items-center space-x-3 text-sm font-medium text-slate-700">
-                       <ChevronRight className="text-blue-600" size={16} />
-                       <span>Maîtrise des manœuvres portuaires (accostage, amarrage)</span>
-                    </li>
-                 </ul>
-              </div>
-
-              <div className="bg-slate-900 p-12 rounded-[3.5rem] shadow-2xl text-white flex flex-col space-y-6 transition-transform hover:-translate-y-2">
-                 <div className="text-blue-400 flex items-center space-x-4">
-                    <Shield size={28} />
-                    <h3 className="text-2xl font-serif font-bold italic">Sécurité & Équipement</h3>
-                 </div>
-                 <p className="text-slate-400 leading-relaxed font-light">
-                    Naviguez serein en maîtrisant tous les aspects sécuritaires de votre bord.
-                 </p>
-                 <ul className="space-y-4 pt-4 border-t border-white/10">
-                    <li className="flex items-center space-x-3 text-sm font-medium text-slate-200">
-                       <ChevronRight className="text-blue-400" size={16} />
-                       <span>La mise en place des équipements de sécurité</span>
-                    </li>
-                    <li className="flex items-center space-x-3 text-sm font-medium text-slate-200">
-                       <ChevronRight className="text-blue-400" size={16} />
-                       <span>La mise en confiance de votre équipage</span>
-                    </li>
-                    <li className="flex items-center space-x-3 text-sm font-medium text-slate-200">
-                       <ChevronRight className="text-blue-400" size={16} />
-                       <span>Maîtrise des règles de sécurité à bord</span>
-                    </li>
-                 </ul>
-              </div>
-           </div>
-
-           <div className="mt-24 bg-blue-600 rounded-[3rem] p-10 text-white flex flex-col md:flex-row items-center justify-between gap-10 shadow-2xl relative overflow-hidden group">
-              <Waves className="absolute bottom-[-50px] left-[-50px] text-white/10 w-64 h-64 group-hover:scale-110 transition-transform duration-1000" />
-              <div className="relative z-10 max-w-xl text-center md:text-left">
-                 <h4 className="text-2xl font-serif font-bold italic mb-2">Prêt à prendre la barre ?</h4>
-                 <p className="text-blue-100 font-light italic">Nos moniteurs s'adaptent à votre niveau et à votre matériel. Contactez-nous pour une session personnalisée.</p>
-              </div>
-              <div className="relative z-10 flex flex-col sm:flex-row gap-4">
-                 <a href={`tel:${PHONE_1.replace(/\s/g, '')}`} className="bg-white text-blue-900 px-8 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs shadow-xl hover:bg-slate-100 transition-colors text-center">Appeler Nicolas</a>
-                 <SafeLink to="/contact" className="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold uppercase tracking-widest text-xs shadow-xl hover:bg-slate-800 transition-colors text-center">Devis Coaching</SafeLink>
-              </div>
-           </div>
-        </div>
-        <WaveDivider flip />
-      </section>
-
-      {/* Trust & Safety Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-           <div className="inline-block p-4 bg-blue-50 rounded-full text-blue-600 mb-6 italic"><Anchor size={32} /></div>
-           <h3 className="text-3xl font-serif font-bold text-slate-900 mb-8 italic">Une pédagogie par l'expérience</h3>
-           <p className="text-lg text-slate-600 font-light leading-relaxed mb-12 italic">
-             "Parce que la mer demande de l'humilité et de la technique, Nautica Ré vous accompagne pour transformer vos premières sorties en souvenirs mémorables, en toute sécurité."
-           </p>
-           <div className="flex flex-wrap justify-center gap-10 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-              <span className="font-serif font-bold text-2xl text-slate-900">Île de Ré</span>
-              <span className="font-serif font-bold text-2xl text-slate-900">La Rochelle</span>
-              <span className="font-serif font-bold text-2xl text-slate-900">Les Minimes</span>
-           </div>
-        </div>
+        <WaveDivider flip color="fill-slate-50" />
       </section>
     </div>
   );
