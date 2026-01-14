@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nautica Ré | Permis Bateau & Location Île de Ré</title>
-    <meta name="description" content="École de navigation et location de bateaux à La Flotte en Ré. Formations permis bateau côtier et hauturier à l'Île de Ré et La Rochelle.">
+    <meta name="description" content="École de navigation et location de bateaux à La Flotte en Ré. Formations permis bateau côtier et hauturier à l'Île de Ré et La Rochelle. Formation complète (5h+2h).">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -82,6 +82,7 @@
                         <a href="#location" class="nav-link text-slate-600 hover:text-blue-900 font-semibold transition-colors duration-200" data-page="location">Location</a>
                         <a href="#coaching" class="nav-link text-slate-600 hover:text-blue-900 font-semibold transition-colors duration-200" data-page="coaching">Coaching</a>
                         <a href="#team" class="nav-link text-slate-600 hover:text-blue-900 font-semibold transition-colors duration-200" data-page="team">Équipe</a>
+                        <a href="#contact" class="nav-link text-slate-600 hover:text-blue-900 font-semibold transition-colors duration-200" data-page="contact">Contact</a>
                     </div>
                     
                     <div class="flex items-center space-x-4">
@@ -112,11 +113,12 @@
                 <a href="#location" class="mobile-link block py-4 text-base font-bold text-slate-700 border-b border-slate-50">Location</a>
                 <a href="#coaching" class="mobile-link block py-4 text-base font-bold text-slate-700 border-b border-slate-50">Coaching</a>
                 <a href="#team" class="mobile-link block py-4 text-base font-bold text-slate-700 border-b border-slate-50">Équipe</a>
+                <a href="#contact" class="mobile-link block py-4 text-base font-bold text-slate-700 border-b border-slate-50">Contact</a>
                 
                 <div class="pt-6 space-y-4">
                     <a href="tel:0688772630" class="flex items-center justify-center space-x-3 bg-blue-50 text-blue-600 w-full py-4 rounded-xl font-bold">
                         <i data-lucide="phone" class="w-5 h-5"></i>
-                        <span>Appeler Nicolas</span>
+                        <span>Appeler Cypriane & Nicolas</span>
                     </a>
                     <a href="#contact" class="mobile-link block w-full bg-blue-900 text-white text-center px-6 py-4 rounded-xl text-base font-bold shadow-md">
                         Inscriptions & Tarifs
@@ -255,7 +257,7 @@
                   </div>
                   <h1 class="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Obtenez votre Permis</h1>
                   <p class="text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-                    Une formation de qualité : <strong>5 jours de théorie</strong> minimum puis <strong>2 jours de pratique</strong> au départ de La Flotte.
+                    Une formation de qualité : <strong>5 heures de théorie</strong> minimum puis <strong>2 heures de pratique</strong> au départ de La Flotte.
                   </p>
                 </div>
             </header>
@@ -272,11 +274,11 @@
                       <div class="bg-blue-50 p-8 rounded-[2.5rem] border-l-8 border-blue-600 shadow-sm relative overflow-hidden">
                         <i data-lucide="anchor" class="absolute -right-4 -bottom-4 text-blue-100 opacity-20" style="width:120px; height:120px;"></i>
                         <p class="text-lg text-slate-700 leading-relaxed font-medium italic relative z-10">
-                          "Une formation sérieuse en 7 jours pour naviguer sur tout type de navire à moteur, sans limite de puissance, jusqu'à 6 milles des côtes."
+                          "Une formation sérieuse en 7 heures pour naviguer sur tout type de navire à moteur, sans limite de puissance, jusqu'à 6 milles des côtes."
                         </p>
                       </div>
                       <p class="text-slate-600 leading-relaxed font-light text-lg">
-                        Nicolas & Cypriane, deux amis passionnés par la mer, vous accueillent dans nos bureaux de <strong>La Flotte</strong>. Notre cursus privilégie le temps d'apprentissage : 5 jours de théorie pour maîtriser le code maritime, suivis de 2 jours de pratique intensive.
+                        Nicolas & Cypriane, deux amis passionnés par la mer, vous accueillent dans nos bureaux de <strong>La Flotte</strong>. Notre cursus privilégie le temps d'apprentissage : 5 heures de théorie pour maîtriser le code maritime, suivis de 2 heures de pratique intensive.
                       </p>
                     </div>
         
@@ -450,15 +452,32 @@
                     <div class="bg-white p-12 md:p-16 rounded-[4rem] border border-slate-100 shadow-2xl self-start relative">
                         <div class="absolute top-0 right-10 w-20 h-1 bg-blue-600"></div>
                         <h2 class="text-3xl md:text-4xl font-serif font-bold text-slate-900 mb-10 uppercase tracking-tight italic">Message Rapide</h2>
-                        <form class="space-y-8" onsubmit="event.preventDefault(); alert('Merci ! Nous vous répondrons très vite.');">
+                        
+                        <!-- Contact Form -->
+                        <form class="space-y-6" id="contactForm">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Nom & Prénom</label>
+                                    <input type="text" id="contact-name" required class="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium" placeholder="Ex: Sophie Martin" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Téléphone</label>
+                                    <input type="tel" id="contact-phone" required class="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium" placeholder="06 12 34 56 78" />
+                                </div>
+                            </div>
                             <div class="space-y-2">
-                                <label class="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Nom complet</label>
-                                <input type="text" required class="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium" placeholder="Ex: Sophie Martin" />
+                                <label class="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Email</label>
+                                <input type="email" id="contact-email" required class="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium" placeholder="sophie@email.com" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="block text-[10px] font-bold text-slate-400 mb-1 uppercase tracking-widest">Message</label>
+                                <textarea id="contact-message" required rows="4" class="w-full bg-slate-50 border-b-2 border-slate-200 focus:border-blue-600 px-4 py-4 focus:outline-none transition-all text-sm font-medium" placeholder="Bonjour, je souhaiterais des informations sur..."></textarea>
                             </div>
                             <button type="submit" class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-6 rounded-2xl shadow-xl transition-all flex items-center justify-center space-x-4 uppercase tracking-[0.2em] text-xs">
                                 <i data-lucide="send" class="w-5 h-5 mr-2"></i> Envoyer ma demande
                             </button>
                         </form>
+
                     </div>
                   </div>
                 </div>
@@ -600,7 +619,7 @@
     <script>
         // Data Objects
         const FAQS = [
-            { q: "Combien de temps faut-il pour passer le permis ?", a: "Minimum 5 jours de théorie suivis de 2 jours de pratique intensive." },
+            { q: "Combien de temps faut-il pour passer le permis ?", a: "Minimum 5 heures de théorie suivies de 2 heures de pratique intensive." },
             { q: "Quel est votre taux de réussite ?", a: "98% de réussite au premier examen grâce à notre méthode personnalisée." },
             { q: "Où se font les départs en mer ?", a: "Départs du Port de La Flotte. Pratique possible à La Rochelle." }
         ];
@@ -679,6 +698,27 @@
                    setTimeout(handleRouting, 10);
                 });
             });
+
+            // Handle Contact Form Submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const name = document.getElementById('contact-name').value;
+                    const phone = document.getElementById('contact-phone').value;
+                    const email = document.getElementById('contact-email').value;
+                    const message = document.getElementById('contact-message').value;
+
+                    const subject = `Contact Site Web: ${name}`;
+                    const body = `Nom: ${name}\nTéléphone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
+                    
+                    // Open Mail Client
+                    window.location.href = `mailto:contact@nautica-re.fr?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
+                    // Simple feedback
+                    alert('Votre client mail va s\'ouvrir avec votre message pré-rempli.');
+                });
+            }
         });
 
         // 2. Simple Hash Router
