@@ -17,8 +17,8 @@ const Location: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="Location Bateaux La Flotte en Ré | Nautica Ré" 
-        description="Location de bateaux exclusivement au Port de La Flotte. Semi-rigides, coques open. Profitez d'une flotte moderne pour vos sorties en mer."
+        title="Location Bateaux La Flotte en Ré | Semi-Rigides & Coques Open" 
+        description="Location de bateaux exclusivement au Port de La Flotte. Semi-rigides et coques open disponibles. Profitez d'une flotte moderne pour vos sorties vers Fort Boyard ou Aix."
       />
 
       {/* Header */}
@@ -44,8 +44,10 @@ const Location: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-16">
-            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4 italic text-center">Notre Flotte</h2>
-            <p className="text-slate-500 text-lg italic uppercase tracking-wider text-xs font-bold text-center">Disponibles au Port de La Flotte en Ré</p>
+            <h2 className="text-4xl font-serif font-bold text-slate-900 mb-4 italic text-center">Notre Flotte de Location</h2>
+            <p className="text-slate-500 text-lg italic uppercase tracking-wider text-xs font-bold text-center">
+              Semi-Rigides & Coques Open pour balade, pêche en mer ou sports nautiques dans le Pertuis Breton
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
@@ -68,7 +70,7 @@ const Location: React.FC = () => {
                     </div>
                   </div>
                   <div className="bg-slate-50 p-6 rounded-2xl mb-10 border border-slate-100">
-                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 italic">Exemples :</p>
+                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2 italic">Modèles types :</p>
                     <p className="text-xs font-semibold text-slate-700 leading-relaxed">{boat.examples}</p>
                   </div>
                   <div className="flex items-center justify-between pt-8 border-t border-slate-100">

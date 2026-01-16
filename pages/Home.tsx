@@ -27,8 +27,8 @@ const Home: React.FC = () => {
         schema={JSON_LD}
       />
 
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden bg-slate-900">
+      {/* Hero Section - Changed h-[90vh] to min-h to prevent overlap on small screens */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900 py-20 lg:py-0">
         <img 
           src="https://www.iledere.com/app/uploads/iledere/2024/07/thumbs/vue-aerienne-port-la-flotte-ile-de-re-par-edouard-salmon-skystudio-640x640.webp" 
           alt="Port de La Flotte en Ré - Nautica Ré" 
@@ -36,8 +36,8 @@ const Home: React.FC = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/60 to-transparent"></div>
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
-          <div className="max-w-3xl pb-12">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white w-full">
+          <div className="max-w-3xl pb-12 pt-10 lg:pt-0">
 
             <h1 className="text-5xl md:text-8xl font-serif font-bold leading-[1.1] mb-8">
               Avec <span className="text-blue-400 italic">Nautica Ré</span>, vivez la mer autrement
@@ -149,22 +149,22 @@ const Home: React.FC = () => {
         <WaveDivider flip color="fill-white" />
       </section>
 
-      {/* Personal touch Section */}
+      {/* Personal touch Section - Increased gap and adjusted image positioning to prevent overlap */}
       <section className="relative py-32 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative group">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+            <div className="relative group mx-auto w-full max-w-xl lg:max-w-none">
               <div className="absolute -inset-8 bg-blue-600/5 rounded-[4rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <img 
                 src="https://i.postimg.cc/PrgQTH5G/monos-test.jpg" 
                 alt="Nicolas et Cypriane - Vos moniteurs" 
                 className="rounded-[4rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3] grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute -bottom-10 -right-10 bg-white p-10 rounded-[2.5rem] shadow-2xl z-20 hidden md:block border border-slate-50 max-w-xs">
+              <div className="absolute -bottom-6 -right-0 lg:-bottom-10 lg:-right-10 bg-white p-8 lg:p-10 rounded-[2.5rem] shadow-2xl z-20 hidden md:block border border-slate-50 max-w-[280px] lg:max-w-xs">
                 <div className="flex items-center space-x-1 text-yellow-400 mb-4">
                   {[1,2,3,4,5].map(i => <Star key={i} size={18} fill="currentColor" />)}
                 </div>
-                <p className="text-slate-900 font-serif italic text-xl leading-relaxed">"Incroyable ! 98% de réussite ce n'est pas un mythe, Nicolas m'a mis en confiance totale."</p>
+                <p className="text-slate-900 font-serif italic text-lg lg:text-xl leading-relaxed">"Incroyable ! 98% de réussite ce n'est pas un mythe, Nicolas m'a mis en confiance totale."</p>
                 <div className="mt-4 flex items-center space-x-3">
                    <div className="w-8 h-1 bg-blue-600"></div>
                    <p className="text-slate-400 text-[10px] font-black uppercase tracking-[0.2em]">Julien, Promotion 2024</p>

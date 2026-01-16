@@ -30,7 +30,7 @@ const Coaching: React.FC = () => {
           </div>
           <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 italic">Accompagnement & Coaching</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-            Gagnez en assurance et maîtrisez votre unité avec l'expertise de <strong>Nicolas & Cypriane</strong>.
+            Devenez un véritable <strong>Chef de bord</strong> et gagnez en assurance avec l'expertise de <strong>Nicolas & Cypriane</strong>.
           </p>
         </div>
         <WaveDivider flip />
@@ -47,7 +47,7 @@ const Coaching: React.FC = () => {
               </div>
               <h2 className="text-4xl font-serif font-bold text-slate-900 italic leading-tight">Naviguez avec assurance</h2>
               <p className="text-lg text-slate-600 leading-relaxed font-light">
-                Vous êtes propriétaire ou locataire d'un bateau et vous cherchez un <strong>skipper</strong> ou un <strong>moniteur professionnel</strong> pour quelques heures ou une journée entière ? Nautica Ré met son savoir-faire à votre service pour transformer votre navigation en pur plaisir.
+                Vous êtes propriétaire ou locataire d'un bateau et vous cherchez un <strong>skipper</strong> ou un <strong>moniteur professionnel</strong> pour quelques heures ou une journée entière ? Nautica Ré met son savoir-faire à votre service pour transformer votre navigation en pur plaisir dans les eaux de La Rochelle et de l'Île de Ré.
               </p>
               
               <div className="bg-slate-50 p-8 rounded-[2.5rem] border-l-8 border-blue-600 shadow-sm">
@@ -71,7 +71,7 @@ const Coaching: React.FC = () => {
                <div className="absolute -inset-4 bg-blue-600/5 rounded-[4rem] blur-2xl"></div>
                <img 
                  src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&q=80&w=800" 
-                 alt="Coaching en mer" 
+                 alt="Coaching en mer La Rochelle" 
                  className="rounded-[3rem] shadow-2xl relative z-10 grayscale-[20%] group-hover:grayscale-0 transition-all duration-700" 
                />
             </div>
@@ -84,7 +84,7 @@ const Coaching: React.FC = () => {
                 <div className="max-w-3xl mb-16">
                   <h3 className="text-3xl md:text-5xl font-serif font-bold mb-6 text-blue-400 italic">Prise en main : Spécial Nouveaux Acquéreurs</h3>
                   <p className="text-slate-300 text-lg font-light leading-relaxed">
-                    Vous venez d'acheter votre premier bateau ? Félicitations ! Nous vous proposons une séance sur-mesure sur votre propre unité pour sécuriser vos premières sorties.
+                    Vous venez d'acheter votre premier bateau ? Félicitations ! Nous vous proposons une séance sur-mesure sur votre propre unité pour sécuriser vos premières sorties au départ de La Rochelle ou de l'Île de Ré.
                   </p>
                 </div>
 

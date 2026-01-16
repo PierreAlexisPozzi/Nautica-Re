@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook, Anchor } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook, Anchor, ExternalLink } from 'lucide-react';
 import SafeLink from './SafeLink';
-import { LOGO_DATA, PHONE_1, PHONE_2 } from '../constants';
+import { LOGO_DATA, PHONE_1, PHONE_2, SOCIAL_LINKS } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -21,8 +21,13 @@ const Footer: React.FC = () => {
               École de navigation et location de bateaux à La Flotte. Formations permis bateau Île de Ré & La Rochelle. Coaching sur-mesure.
             </p>
             <div className="flex space-x-5 pt-2">
-              <a href="#" className="hover:text-blue-400 transition-colors bg-white/5 p-3 rounded-full"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-blue-400 transition-colors bg-white/5 p-3 rounded-full"><Facebook size={20} /></a>
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors bg-white/5 p-3 rounded-full" aria-label="Suivez-nous sur Instagram"><Instagram size={20} /></a>
+              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors bg-white/5 p-3 rounded-full" aria-label="Suivez-nous sur Facebook"><Facebook size={20} /></a>
+            </div>
+            <div className="pt-2">
+              <a href={SOCIAL_LINKS.iledere} target="_blank" rel="noopener noreferrer" className="text-xs text-slate-400 hover:text-white flex items-center transition-colors">
+                <ExternalLink size={12} className="mr-1" /> Recommandé par iledere.com
+              </a>
             </div>
           </div>
 
