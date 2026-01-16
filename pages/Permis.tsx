@@ -103,7 +103,7 @@ const Permis: React.FC = () => {
                   <p className="text-[10px] text-slate-400 mt-2 uppercase tracking-widest font-bold">Théorie & Pratique</p>
                 </div>
                 <div className="border-t md:border-t-0 md:border-l border-slate-100 pt-6 md:pt-0 md:pl-8 flex-grow">
-                  <ul class="space-y-3 text-sm">
+                  <ul className="space-y-3 text-sm">
                     <li className="flex items-center text-slate-700"><Clock size={16} className="mr-3 text-blue-600" /> 5j de cours théorique</li>
                     <li className="flex items-center text-slate-700"><Ship size={16} className="mr-3 text-blue-600" /> 2j de pratique (mer)</li>
                     <li className="flex items-center text-slate-700 font-bold"><CheckCircle size={16} className="mr-3 text-green-500" /> Livret de formation offert</li>
@@ -120,7 +120,7 @@ const Permis: React.FC = () => {
                   <p className="text-[10px] text-slate-500 mt-2 uppercase tracking-widest font-bold">Réussite Maximum</p>
                 </div>
                 <div className="border-t md:border-t-0 md:border-l border-white/10 pt-6 md:pt-0 md:pl-8 flex-grow">
-                  <ul class="space-y-3 text-sm">
+                  <ul className="space-y-3 text-sm">
                     <li className="flex items-center text-slate-300"><Clock size={16} className="mr-3 text-blue-400" /> 5j théorie + Renforcement</li>
                     <li className="flex items-center text-slate-300"><Ship size={16} className="mr-3 text-blue-400" /> 2j de pratique (mer)</li>
                     <li className="flex items-center text-slate-300 font-bold"><CheckCircle size={16} className="mr-3 text-green-400" /> Accès code en ligne illimité 24/7</li>
